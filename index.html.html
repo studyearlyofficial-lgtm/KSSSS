@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KSS Counter | Premium Catering Services</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Fade-in Animation */
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(50px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url("https://source.unsplash.com/1600x900/?buffet,food,catering") no-repeat center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.65);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 0 20px;
+      animation: fadeInUp 1.5s ease;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      color: #FFD700;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      animation: fadeIn 2.5s ease;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border-radius: 30px;
+      text-decoration: none;
+      background: linear-gradient(45deg, #ff9800, #f44336);
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    }
+
+    /* Section Styles */
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      color: #f44336;
+      animation: fadeInUp 1.2s ease;
+    }
+
+    /* Services */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .service-card {
+      background: #fff8f2;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.4s;
+      animation: fadeInUp 1.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    .service-card span {
+      font-size: 2rem;
+    }
+
+    /* Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 15px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: 0.4s ease;
+      animation: fadeInUp 1.4s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    /* Contact */
+    .contact {
+      text-align: center;
+      background: linear-gradient(135deg, #f44336, #ff9800);
+      color: white;
+      padding: 50px 20px;
+      border-radius: 15px;
+      animation: fadeInUp 1.5s ease;
+    }
+    .contact h2 {
+      color: white;
+    }
+    .contact p {
+      font-size: 1.2rem;
+      margin: 10px 0;
+    }
+    .contact a {
+      color: #FFD700;
+      font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: #ccc;
+      animation: fadeIn 2s ease;
+    }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+      z-index: 100;
+      transition: 0.3s;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      background-color: #20b954;
+    }
+    .whatsapp-float i {
+      margin-top: 15px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+  <!-- Font Awesome for WhatsApp Icon -->
+  <script src="https://kit.fontawesome.com/3d0e6f9d4d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>🍴 KSS Counter</h1>
+      <p>Elegant Presentation | Quality Service | Perfect for Every Occasion</p>
+      <a href="https://wa.me/919467655376" target="_blank" class="btn">📲 Book Now on WhatsApp</a>
+    </div>
+  </header>
+
+  <!-- Services -->
+  <section>
+    <h2>✨ Our Services</h2>
+    <div class="services">
+      <div class="service-card"><span>🍇</span><h3>Fresh Fruits</h3><p>Colorful, hygienic fruit displays for your events.</p></div>
+      <div class="service-card"><span>🥗</span><h3>Salad Counters</h3><p>Healthy, beautifully arranged salad counters.</p></div>
+      <div class="service-card"><span>🍴</span><h3>Designer Stalls</h3><p>Premium designer stalls for a luxurious experience.</p></div>
+      <div class="service-card"><span>✨</span><h3>All Facilities</h3><p>Customized catering counters for any occasion.</p></div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section>
+    <h2>📸 Event Gallery</h2>
+    <div class="gallery">
+      <img src="https://source.unsplash.com/600x400/?catering,event" alt="Event setup">
+      <img src="https://source.unsplash.com/601x400/?buffet,party" alt="Buffet">
+      <img src="https://source.unsplash.com/602x400/?wedding,food" alt="Wedding catering">
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact">
+    <h2>📞 Contact Us</h2>
+    <p>📍 Behind Gurunanak Gaushala, Near City Palace, Tohana Road, Ratia</p>
+    <p>📲 Karan: <a href="tel:+919467655376">94676-55376</a></p>
+    <p>📲 Sandeep: <a href="tel:+919996347303">99963-47303</a></p>
+    <p>📲 Soni: <a href="tel:+919996850740">99968-50740</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 KSS Counter | Designed with ❤️ to make your events unforgettable</p>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/919467655376" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</body>
+</html>
